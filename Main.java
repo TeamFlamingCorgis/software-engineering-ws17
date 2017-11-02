@@ -1,7 +1,7 @@
 import src.converters.CurrencyConverter;
 import src.converters.DollarToEuroConverter;
 import src.converters.PoundToLiraConverter;
-import src.converters.currency.CurrencyConverter;
+import src.converters.CurrencyConverter;
 
 class Main {
   public static void main(String[] args)
