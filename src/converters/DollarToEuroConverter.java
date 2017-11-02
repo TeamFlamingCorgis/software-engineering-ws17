@@ -1,3 +1,6 @@
+package src.converters;
+import src.converters.CurrencyConverter;
+
 public class DollarToEuroConverter extends CurrencyConverter
 {
     public DollarToEuroConverter(){
@@ -8,8 +11,8 @@ public class DollarToEuroConverter extends CurrencyConverter
     }
 
 
-    public DollarToEuroConverter(String Dollars, String Euros, double excRate, double total){
-        super(Dollars, Euros, excRate, total);
+    public DollarToEuroConverter(String Dollars, String Euros, double excRate){
+        super(Dollars, Euros, excRate);
 
         setFromCurrency("Dollars");
         setToCurrency("Euros");

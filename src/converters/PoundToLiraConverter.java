@@ -1,4 +1,8 @@
-public class PoundToLiraConverter extends CurrencyConverter{
+package src.converters;
+
+import src.converters.CurrencyConverter;
+
+public class PoundToLiraConverter extends CurrencyConverter {
     public PoundToLiraConverter(){
         super();
 
@@ -8,11 +12,11 @@ public class PoundToLiraConverter extends CurrencyConverter{
     }
 
 
-    public PoundToLiraConverter(String Pound, String Lira, double excRate, double total){
-        super(Pound, Lira, excRate, total);
+    public PoundToLiraConverter(String Pound, String Lira, double excRate){
+        super(Pound, Lira, excRate);
 
         setFromCurrency("Pounds");
-        setToCurrency("Lira");
+        setToCurrency("Liras");
         setExchangeRate(5.05);
     }
 

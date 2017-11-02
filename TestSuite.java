@@ -1,4 +1,7 @@
 import TinyTestJ.Test;
+import src.converters.DollarToEuroConverter;
+import src.converters.UnitConverter;
+
 import static TinyTestJ.Assert.*;
 
 public class TestSuite {

@@ -1,28 +1,24 @@
-public class CurrencyConverter extends UnitConverter{
-    private double exchangeRate, totalChange;
+package src.converters;
+
+public class CurrencyConverter extends UnitConverter {
+    private double exchangeRate;
     private String fromCurrency, toCurrency;
 
-    CurrencyConverter(){
+    public CurrencyConverter(){
         exchangeRate = 0.0;
-        totalChange = 0.0;
         fromCurrency = " ";
         toCurrency = " ";
     }
 
-    CurrencyConverter(String newFromCurrency, String newToCurrency, double newExchangeRate, double newTotalChange){
+    public CurrencyConverter(String newFromCurrency, String newToCurrency, double newExchangeRate){
 
         exchangeRate = newExchangeRate;
-        totalChange = newTotalChange;
         fromCurrency = newFromCurrency;
         toCurrency = newToCurrency;
     }
 
     public void setExchangeRate(double newExchangeRate) {
         exchangeRate = newExchangeRate;
-    }
-
-    public void setTotalChange(double newTotalChange) {
-        totalChange = newTotalChange;
     }
 
     public void setFromCurrency(String newFromCurrency) {
@@ -37,10 +33,6 @@ public class CurrencyConverter extends UnitConverter{
         return exchangeRate;
     }
 
-    public double getTotalChange() {
-        return totalChange;
-    }
-
     public String getFromCurrency() {
         return fromCurrency;
     }
@@ -51,7 +43,6 @@ public class CurrencyConverter extends UnitConverter{
 
     public double convert(double amount){
         double total = amount * getExchangeRate();
-        setTotalChange(total);
 
         return total;
     }
