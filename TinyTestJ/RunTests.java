@@ -5,7 +5,7 @@ package TinyTestJ;
 import java.lang.reflect.*;
 
 // Runs all methods with annotation @Test from classname in first parameter
-public class RunTests {
+class RunTests {
   public static void main(String[] args) throws Exception {
     int passed = 0, failed = 0;
     for (Method m : Class.forName(args[0]).getMethods()) {
