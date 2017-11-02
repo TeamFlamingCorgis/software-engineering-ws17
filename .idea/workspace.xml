@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63678495-65d6-484e-96a4-53ea55d72239" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/converters/CelsiusToFarenheitConverter.java" afterPath="$PROJECT_DIR$/src/converters/CelsiusToFahrenheitConverter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/converters/FarenheitToCelsiusConverter.java" afterPath="$PROJECT_DIR$/src/converters/FahrenheitToCelsiusConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.java" afterPath="$PROJECT_DIR$/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestSuite.java" afterPath="$PROJECT_DIR$/TestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TinyTestJ/Assert.java" afterPath="$PROJECT_DIR$/TinyTestJ/Assert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TinyTestJ/RunTests.java" afterPath="$PROJECT_DIR$/TinyTestJ/RunTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/production/software-engineering-ws17/.idea/workspace.xml" afterPath="$PROJECT_DIR$/output/production/software-engineering-ws17/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/converters/CurrencyConverter.java" afterPath="$PROJECT_DIR$/src/converters/CurrencyConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/converters/DollarToEuroConverter.java" afterPath="$PROJECT_DIR$/src/converters/DollarToEuroConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/converters/LengthConverter.java" afterPath="$PROJECT_DIR$/src/converters/LengthConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/converters/PoundToLiraConverter.java" afterPath="$PROJECT_DIR$/src/converters/PoundToLiraConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/converters/TemperatureConverter.java" afterPath="$PROJECT_DIR$/src/converters/TemperatureConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/converters/UnitConverter.java" afterPath="$PROJECT_DIR$/src/converters/UnitConverter.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -423,12 +410,20 @@
       <workItem from="1509375496101" duration="1653000" />
       <workItem from="1509612825038" duration="1658000" />
       <workItem from="1509626115331" duration="6912000" />
-      <workItem from="1509641641259" duration="1679000" />
+      <workItem from="1509641641259" duration="1736000" />
     </task>
+    <task id="LOCAL-00001" summary="Added All Switch Methods, Fixed typo's">
+      <created>1509643380876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1509643380876</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19962000" />
+    <option name="totallyTimeSpent" value="20019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -469,6 +464,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added All Switch Methods, Fixed typo's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added All Switch Methods, Fixed typo's" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
