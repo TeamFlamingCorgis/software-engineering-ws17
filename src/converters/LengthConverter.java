@@ -51,7 +51,7 @@ public class LengthConverter extends UnitConverter{
     }
 
     public String toString(){
-        return getFromUnit() + " to " + getToUnit() + " converter.";
+        return getFromUnit() + " to " + getToUnit() + " converter";
     }
 
     public void print(){

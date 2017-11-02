@@ -58,7 +58,7 @@ public class TemperatureConverter extends UnitConverter {
     }
 
     public String toString(){
-        return getFromDegrees() + " to " + getToDegrees() + " converter.";
+        return getFromDegrees() + " to " + getToDegrees() + " converter";
     }
 
     public void print(){

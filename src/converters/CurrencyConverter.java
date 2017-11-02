@@ -46,7 +46,7 @@ public class CurrencyConverter extends UnitConverter {
     }
 
     public String toString(){
-        return getFromCurrency() + " to " + getToCurrency() + " converter.";
+        return getFromCurrency() + " to " + getToCurrency() + " converter";
     }
 
     public void print(){

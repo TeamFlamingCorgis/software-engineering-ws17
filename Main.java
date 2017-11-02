@@ -3,25 +3,12 @@ import src.converters.*;
 import java.util.Scanner;
 
 class Main {
-    public Main(){
-        String[] arg = new String[2];
-        Scanner reader = new Scanner(System.in);  // Reading from System.in
-        System.out.println("please choose form the following options\n" +
-                "1) DollarToEuro\n" +
-                "2) PoundToLira\n" +
-                "3) CelsiusToFahrenheit\n" +
-                "4) FahrenheitToCelsius\n" +
-                "5) MetersToYards\n" +
-                "6) MilesToKilometers");
-        arg[0] = reader.toString();
-        System.out.println("please enter a value to convert");
-        arg[1] = reader.toString();
-        main(arg);
-    }
+
     public static void main(String[] args)
     {
         String conversion = args[0];
         String value = args[1];
+
         CurrencyConverter myConverter;
         LengthConverter lengthConverter;
         TemperatureConverter temperatureConverter;
@@ -78,6 +65,7 @@ class Main {
         }
 
         System.out.println(conv + " has converted " + value  + " " + from + " to " + result + " " + to + "!");
-
     }
+
+
 }
