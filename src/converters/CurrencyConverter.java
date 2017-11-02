@@ -4,32 +4,32 @@ public class CurrencyConverter extends UnitConverter {
     private double exchangeRate;
     private String fromCurrency, toCurrency;
 
-    public CurrencyConverter(){
+    CurrencyConverter(){
         exchangeRate = 0.0;
         fromCurrency = " ";
         toCurrency = " ";
     }
 
-    public CurrencyConverter(String newFromCurrency, String newToCurrency, double newExchangeRate){
+    CurrencyConverter(String newFromCurrency, String newToCurrency, double newExchangeRate){
 
         exchangeRate = newExchangeRate;
         fromCurrency = newFromCurrency;
         toCurrency = newToCurrency;
     }
 
-    public void setExchangeRate(double newExchangeRate) {
+    void setExchangeRate(double newExchangeRate) {
         exchangeRate = newExchangeRate;
     }
 
-    public void setFromCurrency(String newFromCurrency) {
+    void setFromCurrency(String newFromCurrency) {
         fromCurrency = newFromCurrency;
     }
 
-    public void setToCurrency(String newToCurrency) {
+    void setToCurrency(String newToCurrency) {
         toCurrency = newToCurrency;
     }
 
-    public double getExchangeRate() {
+    private double getExchangeRate() {
         return exchangeRate;
     }
 

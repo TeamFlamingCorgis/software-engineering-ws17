@@ -7,7 +7,6 @@ public class PoundToLiraConverter extends CurrencyConverter {
     //Default constructor
     public PoundToLiraConverter(){
         super();
-
         setFromCurrency("Pounds");
         setToCurrency("Lira");
         setExchangeRate(5.05);
@@ -18,4 +17,4 @@ public class PoundToLiraConverter extends CurrencyConverter {
         super(Pound, Lira, excRate);
     }
 
-};
+}

@@ -8,9 +8,9 @@ public class Assert {
 
   // assertXYZ methods
 
-  public static void assertEquals(String message, double expected, double actual, double delta) {
+  private static void assertEquals(String message, double expected, double actual, double delta) {
     if (doubleIsDifferent(expected, actual, delta)) {
-      failNotEquals(message, Double.valueOf(expected), Double.valueOf(actual));
+      failNotEquals(message, expected, actual);
     }
   }
 
@@ -20,7 +20,7 @@ public class Assert {
 
   // helper methods to format strings etc.
 
-  public static void fail(String message) {
+  private static void fail(String message) {
     if (message == null) {
       throw new AssertionError();
     }
@@ -31,7 +31,7 @@ public class Assert {
     fail(null);
   }
 
-  static String format(String message, Object expected, Object actual) {
+  private static String format(String message, Object expected, Object actual) {
     String formatted = "";
     if (message != null && !"".equals(message)) {
       formatted = message + " ";
@@ -83,13 +83,7 @@ public class Assert {
   }
   
   private static boolean doubleIsDifferent(double d1, double d2, double delta) {
-    if (Double.compare(d1, d2) == 0) {
-      return false;
-    }
-    if ((Math.abs(d1 - d2) <= delta)) {
-      return false;
-    }
-    return true;
+    return Double.compare(d1, d2) != 0 && (!(Math.abs(d1 - d2) <= delta));
   }
 
 }

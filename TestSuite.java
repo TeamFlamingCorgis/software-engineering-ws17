@@ -4,7 +4,7 @@ import src.converters.UnitConverter;
 
 import static TinyTestJ.Assert.*;
 
-public class TestSuite {
+class TestSuite {
   @Test public static void DETest1() {
     UnitConverter test = new DollarToEuroConverter();
     double result = test.convert(10000);

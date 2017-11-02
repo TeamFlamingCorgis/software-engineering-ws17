@@ -1,34 +1,34 @@
 package src.converters;
 
 public class LengthConverter extends UnitConverter{
-    private double kvalue;
+    private double kValue;
     private String fromUnit, toUnit;
 
-    public LengthConverter(){
+    LengthConverter(){
         fromUnit = " ";
         toUnit = " ";
-        kvalue = 0.0;
+        kValue = 0.0;
     }
 
-    public LengthConverter(String newFromUnit, String newToUnit, double newKValue){
+    LengthConverter(String newFromUnit, String newToUnit, double newKValue){
 
         fromUnit = newFromUnit;
         toUnit = newToUnit;
-        kvalue = newKValue;
+        kValue = newKValue;
     }
 
     //Set methods
 
-    public void setFromUnit(String newFromUnit){
+    void setFromUnit(String newFromUnit){
         fromUnit = newFromUnit;
     }
 
-    public void setToUnit(String newToUnit){
+    void setToUnit(String newToUnit){
         toUnit = newToUnit;
     }
 
-    public void setKValue(double newKValue){
-        kvalue = newKValue;
+    void setKValue(double newKValue){
+        kValue = newKValue;
     }
 
     //Get Methods
@@ -41,13 +41,13 @@ public class LengthConverter extends UnitConverter{
         return toUnit;
     }
 
-    public double getKvalue(){
-        return kvalue;
+    private double getkValue(){
+        return kValue;
     }
 
     //Defining the values from the abstract
     public double convert(double unitInput){
-        return unitInput * getKvalue();
+        return unitInput * getkValue();
     }
 
     public String toString(){
