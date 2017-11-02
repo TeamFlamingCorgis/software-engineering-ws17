@@ -11,13 +11,19 @@ class Main {
      *
     */
 
-    CurrencyConverter myConverter = new DollarToEuroConverter();
-    myConverter.setFromCurrency("Dollars");
-    myConverter.setToCurrency("Euros");
-    myConverter.setExchangeRate(0.86);
 
-    double aLotOfDollars = 10000;
-    double aLotOfEuros = myConverter.convert(aLotOfDollars);
-    System.out.println(myConverter.toString() + " has converted " + aLotOfDollars  + " " + myConverter.getFromCurrency() + " to " + aLotOfEuros + " " + myConverter.getToCurrency() + "!");
+    int option = 0;
+    CurrencyConverter myConverter;
+    double myMoney = 150.0;
+
+    if(option == 0){
+      myConverter = new DollarToEuroConverter();
+    }else{
+      myConverter = new PoundToLiraConverter();
+    }
+
+    double myNewMoney = myConverter.convert(myMoney);
+    System.out.println(myConverter.toString() + " has converted " + myMoney  + " " + myConverter.getFromCurrency() + " to " + myNewMoney + " " + myConverter.getToCurrency() + "!");
+      
   }
 }
