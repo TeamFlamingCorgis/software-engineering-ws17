@@ -1,7 +1,7 @@
 package src.converters;
 
 public class LengthConverter extends UnitConverter{
-    private double kValue;
+    private double kValue, inputUnit, outputUnit;
     private String fromUnit, toUnit;
 
     LengthConverter(){
@@ -47,7 +47,9 @@ public class LengthConverter extends UnitConverter{
 
     //Defining the values from the abstract
     public double convert(double unitInput){
-        return unitInput * getkValue();
+        inputUnit = unitInput;
+        outputUnit = unitInput * getkValue();
+        return outputUnit;
     }
 
     public String toString(){
@@ -55,6 +57,6 @@ public class LengthConverter extends UnitConverter{
     }
 
     public void print(){
-        System.out.println(toString());
+        System.out.println(toString() + ": has converted " + inputUnit + " " + getFromUnit()  + " to " + outputUnit + " " + getToUnit() + "!");
     }
 }

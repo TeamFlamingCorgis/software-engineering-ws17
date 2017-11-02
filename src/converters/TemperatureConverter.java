@@ -3,6 +3,7 @@ package src.converters;
 import java.util.Objects;
 
 public class TemperatureConverter extends UnitConverter {
+    private double tempFrom, tempTo;
     private String fromDegrees, toDegrees;
 
     TemperatureConverter(){
@@ -43,16 +44,19 @@ public class TemperatureConverter extends UnitConverter {
         }else if(Objects.equals(getFromDegrees(), "Celsius") && Objects.equals(getToDegrees(), "Kelvin")){
             total = unitInput + 273.15;
         }else if(Objects.equals(getFromDegrees(), "Fahrenheit") && Objects.equals(getToDegrees(), "Celsius")){
-            total = (unitInput - 32) * 0.6;
+            total = (unitInput - 32) * 0.5556;
         }else if(Objects.equals(getFromDegrees(), "Fahrenheit") && Objects.equals(getToDegrees(), "Kelvin")){
-            total = ((unitInput - 32) * 0.6) + 273.15;
+            total = ((unitInput - 32) * 0.5556) + 273.15;
         }else if(Objects.equals(getFromDegrees(), "Kelvin") && Objects.equals(getToDegrees(), "Celsius")){
             total = unitInput - 273.15;
         }else if(Objects.equals(getFromDegrees(), "Kelvin") && Objects.equals(getToDegrees(), "Fahrenheit")){
-            total = (unitInput + 459.67) * 0.6;
+            total = (unitInput + 459.67) * 0.5556;
         }else{
             total = -1;
         }
+
+        tempFrom = unitInput;
+        tempTo = total;
 
         return total;
     }
@@ -62,6 +66,6 @@ public class TemperatureConverter extends UnitConverter {
     }
 
     public void print(){
-        System.out.println(toString());
+        System.out.println(toString() + ": has converted " + tempFrom + " " + getFromDegrees()  + " to " + tempTo + " " + getToDegrees() + "!");
     }
 }

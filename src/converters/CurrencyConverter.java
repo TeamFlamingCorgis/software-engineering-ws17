@@ -1,7 +1,7 @@
 package src.converters;
 
 public class CurrencyConverter extends UnitConverter {
-    private double exchangeRate;
+    private double exchangeRate, inputAmt, totalAmt;
     private String fromCurrency, toCurrency;
 
     CurrencyConverter(){
@@ -42,7 +42,9 @@ public class CurrencyConverter extends UnitConverter {
     }
 
     public double convert(double amount){
-        return amount * getExchangeRate();
+        inputAmt = amount;
+        totalAmt = amount * getExchangeRate();
+        return totalAmt;
     }
 
     public String toString(){
@@ -50,7 +52,7 @@ public class CurrencyConverter extends UnitConverter {
     }
 
     public void print(){
-        System.out.println(toString());
+        System.out.println(toString() + ": has converted " + inputAmt + " " + getFromCurrency()  + " to " + totalAmt + " " + getToCurrency() + "!");
     }
 
 }

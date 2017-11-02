@@ -2,12 +2,24 @@ import src.converters.*;
 
 import java.util.Scanner;
 
+
 class Main {
 
     public static void main(String[] args)
     {
         String conversion = args[0];
         String value = args[1];
+
+        //Test by TinyTestJ
+        TestSuite.testInput();
+
+        //Test by User
+//        userInput(conversion, value);
+    }
+
+
+    public static void userInput(String conversion, String value){
+
 
         CurrencyConverter myConverter;
         LengthConverter lengthConverter;
