@@ -42,9 +42,7 @@ public class CurrencyConverter extends UnitConverter {
     }
 
     public double convert(double amount){
-        double total = amount * getExchangeRate();
-
-        return total;
+        return amount * getExchangeRate();
     }
 
     public String toString(){
