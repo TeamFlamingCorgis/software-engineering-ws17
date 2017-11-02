@@ -12,21 +12,18 @@ class TestSuite {
   //DollarToEuro
   @Test public static void DETest1() {
     UnitConverter test = new DollarToEuroConverter();
-      test.toString();
     double result = test.convert(10000);
       test.print();
     assertEquals(8600,result,0.001);
   }
   @Test public static void DETest2() {
     UnitConverter test = new DollarToEuroConverter();
-      test.toString();
     double result = test.convert(550);
       test.print();
     assertEquals(473,result,0.001);
   }
   @Test public static void DETest3() {
     UnitConverter test = new DollarToEuroConverter();
-      test.toString();
     double result = test.convert(-1);
       test.print();
     assertEquals(1,result,0.001);
@@ -35,21 +32,18 @@ class TestSuite {
     //PoundToLira
     @Test public static void PLTest1() {
         UnitConverter test = new PoundToLiraConverter();
-        test.toString();
         double result = test.convert(10000);
         test.print();
         assertEquals(50500,result,0.001);
     }
     @Test public static void PLTest2() {
         UnitConverter test = new PoundToLiraConverter();
-        test.toString();
         double result = test.convert(583);
         test.print();
         assertEquals(2944.15,result,0.001);
     }
     @Test public static void PLTest3() {
         UnitConverter test = new PoundToLiraConverter();
-        test.toString();
         double result = test.convert(-1);
         test.print();
         assertEquals(1,result,0.001);
@@ -64,21 +58,18 @@ class TestSuite {
     //MetersToYards
     @Test public static void MYTest1() {
         UnitConverter test = new MetersToYardsConverter();
-        test.toString();
         double result = test.convert(10000);
         test.print();
         assertEquals(10936.13,result,0.001);
     }
     @Test public static void MYTest2() {
         UnitConverter test = new MetersToYardsConverter();
-        test.toString();
         double result = test.convert(257);
         test.print();
         assertEquals(281.059,result,0.001);
     }
     @Test public static void MYTest3() {
         UnitConverter test = new MetersToYardsConverter();
-        test.toString();
         double result = test.convert(-1);
         test.print();
         assertEquals(1,result,0.001);
@@ -87,21 +78,18 @@ class TestSuite {
     //MilesToKilometers
     @Test public static void MKTest1() {
         UnitConverter test = new MilesToKilometersConverter();
-        test.toString();
         double result = test.convert(10000);
         test.print();
         assertEquals(16093.44,result,0.001);
     }
     @Test public static void MKTest2() {
         UnitConverter test = new MilesToKilometersConverter();
-        test.toString();
         double result = test.convert(386);
         test.print();
         assertEquals(621.207,result,0.001);
     }
     @Test public static void MKTest3() {
         UnitConverter test = new MilesToKilometersConverter();
-        test.toString();
         double result = test.convert(-1);
         test.print();
         assertEquals(1,result,0.001);
@@ -117,21 +105,18 @@ class TestSuite {
     //CelsiusToFahrenheit
     @Test public static void CFTest1() {
         UnitConverter test = new CelsiusToFahrenheitConverter();
-        test.toString();
         double result = test.convert(100);
         test.print();
         assertEquals(212,result,0.001);
     }
     @Test public static void CFTest2() {
         UnitConverter test = new CelsiusToFahrenheitConverter();
-        test.toString();
         double result = test.convert(50);
         test.print();
         assertEquals(122,result,0.001);
     }
     @Test public static void CFTest3() {
         UnitConverter test = new CelsiusToFahrenheitConverter();
-        test.toString();
         double result = test.convert(-1);
         assertEquals(1,result,0.001);
     }
@@ -139,21 +124,18 @@ class TestSuite {
     //FahrenheitToCelsius
     @Test public static void FCTest1() {
         UnitConverter test = new FahrenheitToCelsiusConverter();
-        test.toString();
         double result = test.convert(100);
         test.print();
         assertEquals(37.7808,result,0.001);
     }
     @Test public static void FCTest2() {
         UnitConverter test = new FahrenheitToCelsiusConverter();
-        test.toString();
         double result = test.convert(12);
         test.print();
         assertEquals(-11.1111,result,0.001);
     }
     @Test public static void FCTest3() {
         UnitConverter test = new FahrenheitToCelsiusConverter();
-        test.toString();
         double result = test.convert(-1);
         test.print();
         assertEquals(1,result,0.001);

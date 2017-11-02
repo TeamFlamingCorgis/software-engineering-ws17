@@ -72,7 +72,7 @@ class Main {
                 to = lengthConverter.getToUnit();
                 break;
             default:
-                System.out.println("Nope, nicht gut bro");
+                System.err.println("Nope, nicht gut bro");
                 break;
         }
 
