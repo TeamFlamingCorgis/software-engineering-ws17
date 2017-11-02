@@ -1,19 +1,16 @@
 package src.converters;
 
 public class TemperatureConverter extends UnitConverter {
-    private double changeval;
     private String fromDegrees, toDegrees;
 
     public TemperatureConverter(){
         fromDegrees = " ";
         toDegrees = " ";
-        changeval = 0.0;
     }
 
-    public TemperatureConverter(String newFromDegrees, String newToDegrees, double newKValue){
+    public TemperatureConverter(String newFromDegrees, String newToDegrees){
         fromDegrees = newFromDegrees;
         toDegrees = newToDegrees;
-        changeval = newKValue;
     }
 
     //Set methods
@@ -26,10 +23,6 @@ public class TemperatureConverter extends UnitConverter {
         toDegrees = newToDegrees;
     }
 
-    public void setChangeValue(double newChangeValue){
-        changeval = newChangeValue;
-    }
-
     //Get Methods
 
     public String getFromDegrees(){
@@ -40,13 +33,26 @@ public class TemperatureConverter extends UnitConverter {
         return toDegrees;
     }
 
-    public double getChangeValue(){
-        return changeval;
-    }
-
     //Defining the values from the abstract
     public double convert(double unitInput){
-        return unitInput * getChangeValue();
+        double total = 0;
+        if(getFromDegrees() == "Celsius" && getToDegrees() == "Farenheit"){
+            total = (unitInput * 1.8) + 32;
+        }else if(getFromDegrees() == "Celsius" && getToDegrees() == "Kelvin"){
+            total = unitInput + 273.15;
+        }else if(getFromDegrees() == "Farenheit" && getToDegrees() == "Celsius"){
+            total = (unitInput - 32) * 0.6;
+        }else if(getFromDegrees() == "Farenheit" && getToDegrees() == "Kelvin"){
+            total = ((unitInput - 32) * 0.6) + 273.15;
+        }else if(getFromDegrees() == "Kelvin" && getToDegrees() == "Celsius"){
+            total = unitInput - 273.15;
+        }else if(getFromDegrees() == "Kelvin" && getToDegrees() == "Farenheit"){
+            total = (unitInput + 459.67) * 0.6;
+        }else{
+            total = -1;
+        }
+
+        return total;
     }
 
     public String toString(){
