@@ -1,6 +1,10 @@
 import src.converters.*;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.Callable;
 
 
 class Main {
@@ -17,6 +21,16 @@ class Main {
 //        userInput(conversion, value);
     }
 
+
+
+    static final Map<String, Class> CLASSES = new LinkedHashMap<String,Class>() {{
+        put( "command1", CelsiusToFahrenheitConverter.class  );
+        put( "command2", FahrenheitToCelsiusConverter.class   );
+        put( "command3", DollarToEuroConverter.class );
+        put( "command4", PoundToLiraConverter.class );
+        put( "command5", MetersToYardsConverter.class );
+        put( "command5", MilesToKilometersConverter.class );
+    }};
 
     public static void userInput(String conversion, String value){
 
