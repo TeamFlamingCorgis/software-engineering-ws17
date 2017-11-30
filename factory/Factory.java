@@ -6,6 +6,7 @@ public class Factory {
    public Factory(){}
     public static void userInput(String conversion, String value){
 
+        AbstractFactory abstractFactory = new AbstractFactory();
 
         CurrencyConverter myConverter;
         LengthConverter lengthConverter;
@@ -16,10 +17,11 @@ public class Factory {
         //Example one, please complete
         switch(conversion){
             case "DollarToEuro":
+                UnitConverter DTE = abstractFactory.callFactory("DollarToEuro");
                 myConverter = new DollarToEuroConverter();
-                result = myConverter.convert(Double.parseDouble(value));
-                conv = myConverter.toString();
-                from = myConverter.getFromCurrency();
+                result = DTE.convert(Double.parseDouble(value));
+                conv = DTE.toString();
+                from = DTE.getFromCurrency();
                 to = myConverter.getToCurrency();
                 break;
             case "PoundToLira":
