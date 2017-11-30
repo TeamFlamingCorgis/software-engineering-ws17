@@ -8,20 +8,20 @@ import java.util.Map;
 
 public class AbstractFactory {
 
-    private static Map<String, UnitConverter> AbstractFactory;
-    static {
-        Map<String, UnitConverter> aMap = new HashMap<>();
-        aMap.put("CelsiusToFahrenheit", new CelsiusToFahrenheitConverter() );
-        aMap.put("FahrenheitToCelsius", new FahrenheitToCelsiusConverter());
-        aMap.put("DollarToEuro", new DollarToEuroConverter());
-        aMap.put("PoundToLira", new PoundToLiraConverter());
-        aMap.put("MetersToYards", new MetersToYardsConverter());
-        aMap.put("MilesToKilometers", new MilesToKilometersConverter());
-        AbstractFactory = Collections.unmodifiableMap(aMap);
-    }
+    private static Map<String, UnitConverter> ConverterFactory =
+            Collections.unmodifiableMap(new HashMap<String, UnitConverter>(){{
+                    put("CelsiusToFahrenheit", new CelsiusToFahrenheitConverter() );
+                    put("FahrenheitToCelsius", new FahrenheitToCelsiusConverter());
+                    put("DollarToEuro", new DollarToEuroConverter());
+                    put("PoundToLira", new PoundToLiraConverter());
+                    put("MetersToYards", new MetersToYardsConverter());
+                    put("MilesToKilometers", new MilesToKilometersConverter());
+            }});
 
-    public UnitConverter callFactory(String string){
-        return AbstractFactory.get(string);
+    public UnitConverter callFactory(String type){
+
+        return ConverterFactory.get(type);
+
     }
 
 }
