@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AbstractFactory {
+public class ConverterFactory {
 
     private static Map<String, UnitConverter> ConverterFactory =
             Collections.unmodifiableMap(new HashMap<String, UnitConverter>(){{

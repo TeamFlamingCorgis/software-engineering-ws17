@@ -6,7 +6,7 @@ public class Factory {
    public Factory(){}
     public static void userInput(String conversion, String value){
 
-        AbstractFactory abstractFactory = new AbstractFactory();
+        ConverterFactory abstractFactory = new ConverterFactory();
 
         CurrencyConverter myConverter;
         LengthConverter lengthConverter;

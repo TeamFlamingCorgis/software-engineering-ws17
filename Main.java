@@ -12,7 +12,7 @@ class Main {
 
         //Test by User
 //        Factory factory = new Factory.userInput();
-         Factory.userInput(conversion, value);
+//         Factory.userInput(conversion, value);
     }
 
 
