@@ -26,9 +26,8 @@ public class ConverterFactory extends ConverterAbstractFactory{
             if(theFact == null){
                 throw new ConverterFactoryException("Converter Type " + type + " does not exist");
             }
-            return theFact;
         }catch (ConverterFactoryException cfe){
-            System.out.println("Converter Type " + type + " does not exist");
+            System.err.println("CUSTOM ERROR: Converter Type " + type + " does not exist");
         }
         return theFact;
     }
