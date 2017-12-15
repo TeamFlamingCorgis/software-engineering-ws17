@@ -4,9 +4,30 @@ public class LengthConverter extends UnitConverter{
     private double kValue, inputUnit, outputUnit;
     private String fromUnit, toUnit;
 
-    LengthConverter(){
+    public void setkValue(double kValue) {
+        this.kValue = kValue;
+    }
+
+    public double getInputUnit() {
+        return inputUnit;
+    }
+
+    public void setInputUnit(double inputUnit) {
+        this.inputUnit = inputUnit;
+    }
+
+    public double getOutputUnit() {
+        return outputUnit;
+    }
+
+    public void setOutputUnit(double outputUnit) {
+        this.outputUnit = outputUnit;
+    }
+
+    public LengthConverter(){
         fromUnit = " ";
         toUnit = " ";
+
         kValue = 0.0;
     }
 
@@ -19,15 +40,15 @@ public class LengthConverter extends UnitConverter{
 
     //Set methods
 
-    void setFromUnit(String newFromUnit){
+    public void setFromUnit(String newFromUnit){
         fromUnit = newFromUnit;
     }
 
-    void setToUnit(String newToUnit){
+    public void setToUnit(String newToUnit){
         toUnit = newToUnit;
     }
 
-    void setKValue(double newKValue){
+    public void setKValue(double newKValue){
         kValue = newKValue;
     }
 
@@ -41,7 +62,7 @@ public class LengthConverter extends UnitConverter{
         return toUnit;
     }
 
-    private double getkValue(){
+    public double getkValue(){
         return kValue;
     }
 
