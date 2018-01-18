@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="software-engineering-ws17:jar">
+    <output-path>$PROJECT_DIR$/output/artifacts/software_engineering_ws17_jar</output-path>
+    <root id="archive" name="software-engineering-ws17.jar">
+      <element id="module-output" name="software-engineering-ws17" />
+    </root>
+  </artifact>
+</component>
