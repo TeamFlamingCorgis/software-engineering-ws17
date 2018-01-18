@@ -12,8 +12,7 @@ class Main {
 
     public static void main(String[] args) throws Exception
     {
-        String conversion = args[0];
-        String value = args[1];
+
 
         //Test by TinyTestJ
         TestSuite.testInput();
