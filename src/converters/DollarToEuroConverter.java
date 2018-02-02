@@ -14,6 +14,7 @@ public class DollarToEuroConverter extends CurrencyConverter
 //    Overloaded constructor
     public DollarToEuroConverter(String Dollars, String Euros, double excRate){
         super(Dollars, Euros, excRate);
+
     }
 
 }

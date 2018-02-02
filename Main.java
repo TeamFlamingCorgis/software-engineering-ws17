@@ -12,6 +12,14 @@ class Main {
 
     public static void main(String[] args) throws Exception
     {
+        //Homework 7
+        //Exception for null values and negative currencies (CURRENCY)
+//        CurrencyConverter okayCurrency = new DollarToEuroConverter("Dollars", "Euros", 0.86);
+//        CurrencyConverter notokayCurrency = new DollarToEuroConverter(null, null, -4);
+        //Exception for null values, mismatch of types (TEMPERATURE)
+//        TemperatureConverter okayTemp = new CelsiusToFahrenheitConverter("Celsius", "Fahrenheit");
+//        TemperatureConverter notokTemp = new CelsiusToFahrenheitConverter("o", "k");
+//        TemperatureConverter notokayTemp = new CelsiusToFahrenheitConverter(null, null);
 
 
         //Test by TinyTestJ

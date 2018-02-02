@@ -1,4 +1,5 @@
 package src.converters;
+import errorHandling.DataTypeException;
 
 public class CurrencyConverter extends UnitConverter {
     private double exchangeRate, inputAmt, totalAmt;
@@ -12,10 +13,31 @@ public class CurrencyConverter extends UnitConverter {
 
     CurrencyConverter(String newFromCurrency, String newToCurrency, double newExchangeRate){
 
-        exchangeRate = newExchangeRate;
-        fromCurrency = newFromCurrency;
-        toCurrency = newToCurrency;
-    }
+        //HEY! FILL OUT THOSE VALUES MAN!
+           try {
+               if(newFromCurrency != null || newToCurrency != null){
+                fromCurrency = newFromCurrency;
+                toCurrency = newToCurrency;
+               }else {
+                   throw new DataTypeException("Your values are null, please fix it.", newFromCurrency, newToCurrency);
+               }
+           } catch (DataTypeException e) {
+               System.out.println("One of these currencies is invalid: " + e.getFrom() + " or " + e.getTo());
+               e.printStackTrace();
+           }
+
+        //HEY! NO NEGATIVES PLEASE!
+           try {
+               if(newExchangeRate > 0){
+                   exchangeRate = newExchangeRate;
+                }else{
+                   throw new DataTypeException("Your might owe money, but you cannot have negative value for the currency", newExchangeRate);
+               }
+           } catch (DataTypeException e) {
+               System.out.println("\nExchange rate invalid = "+ e.getamt());
+               e.printStackTrace();
+           }
+       }
 
     void setExchangeRate(double newExchangeRate) {
         exchangeRate = newExchangeRate;
